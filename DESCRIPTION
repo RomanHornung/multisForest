@@ -1,0 +1,27 @@
+Package: multisForest
+Type: Package
+Title: Prediction for Partly Missing Multi-Omics Data Using 
+       Multi-Source Random Forests
+Version: 0.1.1
+Date: 2022-11-23
+Authors@R: c(person("Roman", "Hornung", role = c("aut", "cre"), 
+                      email = "hornung@ibe.med.uni-muenchen.de"),
+             person("Frederik", "Ludwigs", role = c("aut"),
+                      email = "f.ludwigs@yahoo.de"))
+Description: Prediction for partly missing multi-omics data using 
+  multi-source random forests. Training can be performed using
+  the function multisfor() and prediction using the function
+  predict.multisfor().
+License: GPL-3
+Depends: R (>= 3.5.0)
+Imports: party, ranger, permimp
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.2
+NeedsCompilation: no
+Packaged: 2022-06-07 08:22:04 UTC; hornung
+Author: Roman Hornung [aut, cre],
+  Frederik Ludwigs [aut]
+Maintainer: Roman Hornung <hornung@ibe.med.uni-muenchen.de>
+Repository: CRAN
+Date/Publication: 2022-06-07 09:00:02 UTC

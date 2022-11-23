@@ -1,0 +1,27 @@
+
+# Load some necessary packages:
+
+library(checkmate)
+library(randomForestSRC)
+library(caret)
+library(pROC)
+library(doParallel)
+library(parallel)
+library(ROCR)
+library(caret)
+
+# Load the data:
+
+load("Z:/Projects/SideProjects/BlockwiseMissing/multisForest_Package/BWM-Article/Data/Example_Data/ExampleData.Rda")
+
+# Fit a mult-source random forest:
+fw_rfs <- multisfor(data          = datatrain, 
+                    folds         = foldstrain,
+                    num_trees     = 5, 
+                    mtry          = 50,
+                    min_node_size = 1)
+
+# Get predicted class-probabilites for each obs. in the test-set:
+predictions <- predict(object   = fw_rfs, 
+                       data     = datatest,
+                       weighted = TRUE)
